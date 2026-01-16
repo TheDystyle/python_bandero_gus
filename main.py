@@ -1,3 +1,8 @@
+import sys
+print("PY:", sys.executable)
+print("VER:", sys.version)
+print("PATH0:", sys.path[0])
+
 import random
 import os
 import pygame
@@ -20,8 +25,8 @@ FONT = pygame.font.SysFont('Verdana', 30)
 FPS = pygame.time.Clock()
 
 COLOR_DIAMONDBLUE = (62, 95, 138)
-COLOR_YELLOW = (255,176,46)
-COLOR_BLACK = (0,0,0)
+COLOR_YELLOW = (255, 176, 46)
+COLOR_BLACK = (0, 0, 0)
 COLOR_BLUE = (0, 0, 255)
 COLOR_GEEN = (50, 205, 50)
 
@@ -50,7 +55,7 @@ def create_enemy():
     enemy_size = (102, 36)
     enemy = pygame.transform.scale(pygame.image.load('img\\enemy.png').convert_alpha(), (102, 36))
    # enemy_rect = pygame.Rect(WIDTH, random.randint(enemy.get_height(), HEIGHT - enemy.get_height()),*enemy.get_size())
-    enemy_rect = pygame.Rect(WIDTH, random.randint(HEIGHT/5, HEIGHT/5*4), *enemy_size)
+    enemy_rect = pygame.Rect(WIDTH, random.randint(HEIGHT//5, (HEIGHT*4)//5), *enemy_size)
     enemy_move = [random.randint(-8, -4), 0]
     return [enemy, enemy_rect, enemy_move]
 
