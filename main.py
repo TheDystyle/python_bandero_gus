@@ -1,15 +1,10 @@
-import sys
-print("PY:", sys.executable)
-print("VER:", sys.version)
-print("PATH0:", sys.path[0])
-
 import random
 import os
 import pygame
 from pygame.constants import QUIT, K_DOWN, K_RIGHT, K_LEFT, K_UP
 
 pygame.init()
-pygame.mixer.init() #music
+pygame.mixer.init()  #music
 
 # title
 pygame.display.set_caption("Гусак Бандера")
@@ -46,10 +41,11 @@ player_size = (120, 60)
 player = pygame.transform.scale(pygame.image.load('img\\player.png').convert_alpha(), (120, 60))
 player_rect = player.get_rect(topleft=(0, HEIGHT/2))
 
-player_move_down = [0, 4]
-player_move_up = [0, -4]
-player_move_left = [-4, 0]
-player_move_right = [4, 0]
+player_move_down = [0, 7]
+player_move_up = [0, -7]
+player_move_left = [-7, 0]
+player_move_right = [7, 0]
+
 
 def create_enemy():
     enemy_size = (102, 36)
